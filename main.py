@@ -70,6 +70,5 @@ def hapus(produk_id: int):
     for i, item in enumerate(db):
         if item["id"] == produk_id:
             db.pop(i)
-            return {"message": "Produk berhasil dihapus"}
+            return
     raise HTTPException(status_code=404, detail="Produk tidak ditemukan")
-    
